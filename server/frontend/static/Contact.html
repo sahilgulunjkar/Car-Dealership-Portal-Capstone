@@ -1,0 +1,92 @@
+<html>
+<head>
+  <link rel="stylesheet" href="static/style.css">
+  <link rel="stylesheet" href="static/bootstrap.min.css">
+</head>
+<nav class="navbar navbar-expand-lg" style="background-color:#0F172A; height:1in;">
+  <div class="container-fluid">
+
+    <!-- Left Title -->
+    <h2 class="mb-0" style="padding-right: 5%; color:#F8FAFC;">Dealerships</h2>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"
+      style="border-color: rgba(248, 250, 252, 0.5);">
+      <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarText">
+
+      <!-- Centered Nav Items -->
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+        <li class="nav-item">
+          <a class="nav-link" style="font-size: larger; color:#F8FAFC;" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="font-size: larger; color:#F8FAFC;" href="/about">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" style="font-size: larger; color:#F8FAFC;" href="/contact">Contact Us</a>
+        </li>
+      </ul>
+
+      <!-- Right-aligned Login/Register -->
+      <div class="d-flex align-items-center">
+        <div class="loginlink" id="loginlogout" style="color:#F8FAFC;"></div>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+<style>
+  .navbar .nav-link:hover {
+    color: #94A3B8 !important;
+  }
+  .navbar .nav-link.active {
+    font-weight: 600;
+  }
+</style>
+
+<!-- Hero banner -->
+  <div style="position: relative; width: 100%; height: 420px; overflow: hidden;">
+    <img src="/static/contact.png" alt="Contact Us" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(75%);">
+    <div style="
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #F8FAFC;
+      padding: 0 16px;
+    ">
+      <h1 style="font-size: 42px; margin-bottom: 14px;">Contact Best Cars</h1>
+      <p style="max-width: 640px; margin: 0 auto 18px;">Questions about vehicles, financing, or service? Reach out and our team will get back to you fast.</p>
+      <a href="tel:(555)123-4567" style="
+        background-color: #0F172A;
+        padding: 12px 26px;
+        border-radius: 30px;
+        color: #F8FAFC;
+        font-weight: bold;
+        text-decoration: none;
+        display: inline-block;
+      ">Call (555) 123-4567</a>
+    </div>
+  </div>
+
+  <!-- Contact details and quick form -->
+<div class="card" style="width: 85%; max-width: 800px; margin: -60px auto 40px auto; padding: 40px; box-shadow: 0 8px 30px rgba(0,0,0,0.12);">
+  <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+    <h2 style="margin-bottom: 16px; font-size: 28px;">Get in touch</h2>
+    <p style="margin-bottom: 24px; color: #64748b; font-size: 16px;">We are here to help with any questions about vehicles, financing, or service appointments.</p>
+    
+    <div style="text-align: left; display: inline-block;">
+      <p style="margin: 10px 0;"><strong>Phone:</strong> (555) 123-4567</p>
+      <p style="margin: 10px 0;"><strong>Email:</strong> support@bestcars.com</p>
+      <p style="margin: 10px 0;"><strong>Address:</strong> 1234 Main Street, Suite 200, Anytown, USA</p>
+      <p style="margin: 10px 0;"><strong>Hours:</strong> Mon–Sat, 9:00 AM – 7:00 PM</p>
+    </div>
+  </div>
+</div>
+
+</html>

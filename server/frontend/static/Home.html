@@ -26,39 +26,89 @@ let checkSession = ()=>{
 </script>
 </head>
 <body onload="checkSession()">
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
-  <div class="container-fluid">
-    <h2 style="padding-right: 5%;">Dealerships</h2>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" style="font-size: larger;" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" style="font-size: larger;" href="/about">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" style="font-size: larger;" href="/contact">Contact Us</a>
-        </li>
-      </ul>
-      <span class="navbar-text">
-        <div class="loginlink" id="loginlogout">
+
+  <nav class="navbar navbar-expand-lg" style="background-color:#0F172A; height:1in;">
+    <div class="container-fluid">
+  
+      <!-- Left Title -->
+      <h2 class="mb-0" style="padding-right: 5%; color:#F8FAFC;">Dealerships</h2>
+  
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"
+        style="border-color: rgba(248, 250, 252, 0.5);">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarText">
+  
+        <!-- Centered Nav Items -->
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+          <li class="nav-item">
+            <a class="nav-link active" style="font-size: larger; color:#F8FAFC;" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="font-size: larger; color:#F8FAFC;" href="/about">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="font-size: larger; color:#F8FAFC;" href="/contact">Contact Us</a>
+          </li>
+        </ul>
+  
+        <!-- Right-aligned Login/Register -->
+        <div class="d-flex align-items-center">
+          <div class="loginlink" id="loginlogout" style="color:#F8FAFC;"></div>
         </div>
-        </span>
+  
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+  
+  <style>
+    .navbar .nav-link:hover {
+      color: #94A3B8 !important;
+    }
+    .navbar .nav-link.active {
+      font-weight: 600;
+    }
+  </style>
+  
+
+
 <div style="display: flex;flex-direction: column;">
-<div class="card" style="width: 50%;margin-top: 50px;align-self: center;">
-  <img src="static/car_dealership.jpg" class="card-img-top" alt="...">
-  <div class="banner">
-    <h5>Welcome to our Dealerships!</h5>
-    <a href="/dealers" class="btn" style="background-color: aqua;margin:10px">View Dealerships</a>
+
+  <div style="position: relative; width: 100%; height: 500px;">
+
+    <img src="static/car-dealership.png"
+         style="width: 100%; height: 120%; object-fit: cover; filter: brightness(80%);">
+  
+    <div style="
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+    ">
+      <h1 style="font-size: 48px; margin-bottom: 20px;">
+        Welcome to our Dealerships!
+      </h1>
+  
+      <a href="/dealers"
+         style="
+           background-color: 0F172A;
+           padding: 12px 30px;
+           border-radius: 30px;
+           color: F8FAFC;
+           font-weight: bold;
+           text-decoration: none;
+           display: inline-block;
+         ">
+         View Dealerships
+      </a>
+    </div>
+  
   </div>
-</div>
-</div>
+  
+
 </body>
 </html>
