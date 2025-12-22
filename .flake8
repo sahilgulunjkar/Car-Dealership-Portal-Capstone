@@ -1,0 +1,12 @@
+[flake8]
+exclude =
+    dgangoenv,
+    server/djangoenv,
+    frontend,
+    database,
+    api_output,
+    migrations,
+    __pycache__,
+    .git,
+    .github
+ignore = E501
