@@ -1,76 +1,84 @@
-# Full Stack Capstone - Car Dealership Portal
+# Full-Stack Car Dealership Platform
 
-Welcome to the Car Dealership Portal! This is a full-stack application that allows users to view dealerships, browse cars, and submit reviews with automated sentiment analysis.
+A comprehensive full-stack application for managing car dealerships, reviews, and inventory. This project utilizes a modern microservices architecture, combining a Django backend with a React frontend and a dedicated Node.js/MongoDB service for data management.
 
-## 🚀 Tech Stack
+## 🏗️ System Architecture
 
-- **Frontend:** React.js
-- **Backend:** Django (Python)
-- **Database & Microservices:** Node.js, Express, MongoDB
-- **Containerization:** Docker & Docker Compose
+The application is built using a decoupled architecture:
+- **Backend (Django)**: Handles core application logic, user authentication, and serves the frontend static files.
+- **Frontend (React)**: Provides a dynamic, responsive user interface for browsing dealers and posting reviews.
+- **Database Service (Node.js/Express)**: A microservice that interacts with a MongoDB database to manage dealership and review data.
+- **Sentiment Analysis**: An integrated feature that analyzes customer reviews to provide insights into sentiment.
 
-## ✨ Features
+## 🚀 Key Features
 
-- **User Authentication:** Sign up, log in, and log out functionalities.
-- **Dealership Directory:** Browse all dealerships or filter by state.
-- **Dealer Details:** View detailed information about a specific dealership and its reviews.
-- **Review System:** Authenticated users can post reviews for dealerships.
-- **Sentiment Analysis:** Reviews are automatically analyzed for their sentiment (positive, neutral, negative).
+- **User Authentication**: Secure sign-up and login functionality.
+- **Dealer Management**: Browse dealerships filtered by state or view individual dealer details.
+- **Review System**: View reviews from other customers and post new reviews with car details.
+- **Sentiment Insights**: Automatically analyzes the sentiment of posted reviews.
+- **Inventory Search**: Integrated car inventory search functionality.
 
-## 🛠️ Project Structure
+## 🛠️ Technology Stack
 
-- `/server/frontend`: React application.
-- `/server/djangoapp`: Django backend application containing the core logic, views, and models.
-- `/server/database`: Node.js microservice connected to MongoDB for handling dealership and review data. Containerized with Docker.
-- `/start_dev.ps1`: An automated PowerShell script to spin up the entire development environment in one click!
+| Component | Technology |
+| :--- | :--- |
+| **Backend** | Python, Django, Django REST Framework |
+| **Frontend** | JavaScript, React, React Router, HTML5, CSS3 |
+| **Microservice** | Node.js, Express.js |
+| **Databases** | SQLite (Django/Users), MongoDB (Dealerships/Reviews) |
+| **Containerization** | Docker, Docker Compose |
 
-## 🏃‍♂️ How to Run the Application
+## 📦 Installation & Setup
 
-### The Easy Way (Windows / PowerShell)
+### Prerequisites
+- Python 3.x
+- Node.js & npm
+- Docker Desktop
 
-We have provided a comprehensive startup script that automates the entire process, including starting Docker, building images, running database containers, starting the Django server, and launching the React frontend.
+### Standard Setup
 
-Just open PowerShell as Administrator and run:
-```powershell
-.\start_dev.ps1
-```
+1. **Clone the Repository**:
+   ```bash
+   git clone <repository-url>
+   cd Full-Stack-Capstone
+   ```
 
-### The Manual Way
+2. **Backend Setup**:
+   - Create a virtual environment: `python -m venv dgangoenv`
+   - Activate it: `.\dgangoenv\Scripts\activate`
+   - Install dependencies: `pip install -r server/requirements.txt`
+   - Run migrations: `python server/manage.py migrate`
 
-If you prefer to start the services manually, follow these steps:
+3. **Frontend Setup**:
+   - Navigate to `server/frontend`
+   - Install dependencies: `npm install`
+   - Build the project: `npm run build`
 
-#### 1. Database & Microservice (Docker)
-Open a terminal and navigate to the database directory:
-```bash
-cd server/database
-docker build . -t nodeapp
-docker-compose up -d
-```
+4. **Database Service Setup**:
+   - Navigate to `server/database`
+   - Follow the Docker instructions below or run manually with `npm install` and `node app.js`.
 
-#### 2. Django Backend
-Open a new terminal, activate the virtual environment, and run the server:
-```bash
-cd server
-..\dgangoenv\Scripts\activate
-python manage.py makemigrations
-python manage.py migrate
-python manage.py runserver
-```
-*Note: The backend runs on `http://localhost:8000`*
+### 🐳 Docker Deployment (Recommended)
 
-#### 3. React Frontend
-Open a new terminal and start the React app:
-```bash
-cd server/frontend
-npm install
-npm start
-```
-*Note: The frontend runs on `http://localhost:3000`*
+To deploy the application using Docker:
 
-## � Screenshots
+1. **Ensure Docker is running**.
+2. **Start the services**:
+   ```bash
+   docker-compose up --build
+   ```
+   This command builds the images and starts the Django app, React frontend, and MongoDB service concurrently.
 
-### Home Page
-![Home Page](screenshots/Home%20Page.png)
+## 📂 Project Structure
 
-### Review Dealers Page
-![Review Dealers Page](screenshots/Review%20Dealers%20Page.png)
+- `server/`: Root of the Django backend and overall project logic.
+  - `djangoapp/`: Core Django application logic and APIs.
+  - `djangoproj/`: Django project settings and routing.
+  - `frontend/`: React source code and build files.
+  - `database/`: Node.js microservice for MongoDB interaction.
+- `dgangoenv/`: Python virtual environment.
+- `Screenshots/`: Application preview images.
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
